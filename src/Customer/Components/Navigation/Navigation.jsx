@@ -1,23 +1,11 @@
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/aspect-ratio'),
-    ],
-  }
-  ```
-*/
+
 import { Fragment, useState } from 'react'
 import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
 import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { navigation } from './navigationData'
 import { Avatar, Button, Menu, MenuItem } from '@mui/material'
 import { deepPurple } from '@mui/material/colors'
+import headingLogo from '../../../assets/logo/ayaans.jpg'
 
 // const navigation = {
 //   categories: [
@@ -311,7 +299,7 @@ export default function Navigation() {
 
       <header className="relative bg-white">
         <p className="flex h-10 items-center justify-center bg-indigo-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
-          Ayaan's Online Shopping Ltd.
+        বিশ্বাস, ভরসা আর আস্থার আঙিনা Ayaan's
         </p>
 
         <nav aria-label="Top" className="mx-auto ">
@@ -332,8 +320,9 @@ export default function Navigation() {
                   <span className="sr-only">Ayaan's Ltd.</span>
                   <img
                     className="h-12 w-auto mr-2"
-                    src="https://i.ibb.co/c6SJ8V4/1.png"
-                    alt=""
+                    src={headingLogo}
+                    // src="https://i.ibb.co/c6SJ8V4/1.png"
+                    alt="ayaans heading logo"
                   />
                 </a>
               </div>
