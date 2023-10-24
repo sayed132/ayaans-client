@@ -33,7 +33,7 @@ const Cart = () => {
                             </div>
                         </div>
                         <Button className='w-full' variant='contained' sx={{ px: "7rem", py: ".7rem", bgcolor: "#9155fd" }}>
-                                Check Out
+                                Checkout
                             </Button>
                     </div>
                 </div>
