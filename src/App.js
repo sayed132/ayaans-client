@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-import Navigation from './Customer/Components/Navigation/Navigation';
-import HomePage from './Customer/Pages/HomePage/HomePage';
-import Footer from './Customer/Components/Footer/Footer';
-import Product from './Customer/Components/Product/Product';
-import ProductDetails from './Customer/Components/ProductDetails/ProductDetails';
-import Cart from './Customer/Components/Cart/Cart';
-import Checkout from './Customer/Components/Checkout/Checkout';
+
+import { Route, Routes } from 'react-router-dom';
+import CustomerRouter from './Routers/CustomerRouter';
 
 function App() {
   return (
     <div>
-      <Navigation />
+      <Routes>
+        <Route path='/*' element={<CustomerRouter />}></Route>
+      </Routes>
+
+      
       <div className='mt-3 lg:mt-6'>
-        {/* <HomePage /> */}
-        {/* <Product /> */}
-        {/* <ProductDetails /> */}
-        {/* <Cart /> */}
-        <Checkout />
+
       </div>
-      <Footer />
+     
     </div>
   );
 }
