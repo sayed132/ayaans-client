@@ -7,6 +7,7 @@ import { Avatar, Button, Menu, MenuItem } from '@mui/material'
 import { deepPurple } from '@mui/material/colors'
 import headingLogo from '../../../assets/logo/ayaans.jpg'
 import { useNavigate } from 'react-router-dom'
+import AuthModal from '../../Auth/AuthModal'
 
 // const navigation = {
 //   categories: [
@@ -302,7 +303,7 @@ export default function Navigation() {
 
       <header className="relative bg-white">
         <p className="flex h-10 items-center justify-center bg-indigo-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
-        বিশ্বাস, ভরসা আর আস্থার আঙিনা Ayaan's
+          বিশ্বাস, ভরসা আর আস্থার আঙিনা Ayaan's
         </p>
 
         <nav aria-label="Top" className="mx-auto ">
@@ -446,7 +447,7 @@ export default function Navigation() {
               <div className="ml-auto flex items-center">
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
                   {
-                    true ? (
+                    false ? (
                       <div>
                         <Avatar
                           className='text-white'
@@ -476,7 +477,7 @@ export default function Navigation() {
                             Profile
                           </MenuItem>
 
-                          <MenuItem onClick={()=>navigate(`/account/order`)}>
+                          <MenuItem onClick={() => navigate(`/account/order`)}>
                             My Orders
                           </MenuItem>
 
@@ -527,6 +528,8 @@ export default function Navigation() {
           </div>
         </nav>
       </header>
+
+      <AuthModal handleClose={handleClose} open={openAuthModal}/>
     </div>
   )
 }
